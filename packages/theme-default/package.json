@@ -1,8 +1,55 @@
 {
   "name": "@sveltepress/theme-default",
-  "homepage": "https://sveltepress.site/",
+  "type": "module",
   "version": "2.0.4",
   "description": "The default theme for sveltepress",
+  "author": {
+    "name": "Dongsheng Zhao",
+    "email": "1197160272@qq.com"
+  },
+  "license": "MIT",
+  "homepage": "https://sveltepress.site/",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Blackman99/sveltepress",
+    "directory": "packages/theme-default"
+  },
+  "keywords": [
+    "Docs",
+    "svelte",
+    "svelte docs",
+    "sveltepress"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./style.css": "./src/style.css",
+    "./components": {
+      "types": "./src/components/index.ts",
+      "import": "./src/components/index.ts",
+      "svelte": "./src/components/index.ts"
+    },
+    "./context": {
+      "types": "./src/context/index.ts",
+      "import": "./src/context/index.ts",
+      "svelte": "./src/context/index.ts"
+    },
+    "./PageLayout.svelte": {
+      "import": "./src/components/PageLayout.svelte",
+      "svelte": "./src/components/PageLayout.svelte"
+    },
+    "./GlobalLayout.svelte": {
+      "import": "./src/components/GlobalLayout.svelte",
+      "svelte": "./src/components/GlobalLayout.svelte"
+    },
+    "./types": {
+      "types": "./types.d.ts"
+    }
+  },
+  "types": "./src/index.ts",
+  "files": [
+    "dist",
+    "types.d.ts"
+  ],
   "scripts": {
     "test": "vitest",
     "cp:assets": "cp src/style.css dist && cp -r src/fonts dist",
@@ -10,35 +57,12 @@
     "build": "pnpm build:comps && pnpm cp:assets",
     "prepare": "pnpm build"
   },
-  "files": [
-    "dist",
-    "types.d.ts"
-  ],
-  "keywords": [
-    "Docs",
-    "svelte",
-    "svelte docs",
-    "sveltepress"
-  ],
-  "author": {
-    "name": "Dongsheng Zhao",
-    "email": "1197160272@qq.com"
-  },
-  "repository": {
-    "type": "github",
-    "url": "https://github.com/Blackman99/sveltepress",
-    "directory": "packages/theme-default"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@sveltejs/kit": "^2.5.1",
-    "@sveltejs/package": "^2.3.0",
+  "peerDependencies": {
+    "@sveltejs/kit": "^1.20.4 || ^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
     "@sveltepress/vite": "workspace:*",
-    "@types/node": "^20.11.20",
-    "svelte": "^4.2.12",
-    "unified": "^11.0.4",
-    "vite": "^5.1.4",
-    "vitest": "^1.3.1"
+    "svelte": "^3.55.1 || ^4.0.0 || ^5.0.0",
+    "vite": "^4.3.9 || ^5.0.0"
   },
   "dependencies": {
     "@docsearch/css": "^3.5.2",
@@ -58,39 +82,15 @@
     "workbox-precaching": "^7.0.0",
     "workbox-routing": "^7.0.0"
   },
-  "peerDependencies": {
-    "@sveltejs/kit": "^1.20.4 || ^2.0.0",
-    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+  "devDependencies": {
+    "@sveltejs/kit": "^2.5.16",
+    "@sveltejs/package": "^2.3.0",
     "@sveltepress/vite": "workspace:*",
-    "svelte": "^3.55.1 || ^4.0.0",
-    "vite": "^4.3.9 || ^5.0.0"
-  },
-  "type": "module",
-  "types": "./src/index.ts",
-  "exports": {
-    ".": "./dist/index.js",
-    "./style.css": "./src/style.css",
-    "./components": {
-      "import": "./src/components/index.ts",
-      "svelte": "./src/components/index.ts",
-      "types": "./src/components/index.ts"
-    },
-    "./context": {
-      "import": "./src/context/index.ts",
-      "svelte": "./src/context/index.ts",
-      "types": "./src/context/index.ts"
-    },
-    "./PageLayout.svelte": {
-      "import": "./src/components/PageLayout.svelte",
-      "svelte": "./src/components/PageLayout.svelte"
-    },
-    "./GlobalLayout.svelte": {
-      "import": "./src/components/GlobalLayout.svelte",
-      "svelte": "./src/components/GlobalLayout.svelte"
-    },
-    "./types": {
-      "types": "./types.d.ts"
-    }
+    "@types/node": "^20.11.20",
+    "svelte": "^4.2.12",
+    "unified": "^11.0.4",
+    "vite": "^5.1.4",
+    "vitest": "^1.3.1"
   },
   "publishConfig": {
     "types": "./dist/index.d.ts",

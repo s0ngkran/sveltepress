@@ -18,7 +18,7 @@
   role="none"
   style:top
   style:z-index={zIndex}
-/>
+></div>
 
 <style>
   .backdrop {

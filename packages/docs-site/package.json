@@ -1,6 +1,8 @@
 {
   "name": "@sveltepress/docs-site",
+  "type": "module",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -10,17 +12,15 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.1",
-    "@sveltejs/kit": "^2.5.1",
+    "@sveltejs/kit": "^2.5.16",
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "@sveltepress/theme-default": "workspace:*",
     "@sveltepress/twoslash": "workspace:*",
     "@sveltepress/vite": "workspace:*",
     "@types/node": "^20.11.20",
-    "svelte": "^4.2.12",
+    "svelte": "5.0.0-next.158",
     "svelte-check": "^3.6.4",
     "vite": "^5.1.4",
     "workbox-window": "^7.0.0"
-  },
-  "type": "module",
-  "license": "MIT"
+  }
 }

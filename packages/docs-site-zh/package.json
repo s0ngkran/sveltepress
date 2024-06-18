@@ -1,6 +1,8 @@
 {
   "name": "@sveltepress/docs-site-zh",
+  "type": "module",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -20,7 +22,5 @@
     "svelte-check": "^3.6.4",
     "vite": "^5.1.4",
     "workbox-window": "^7.0.0"
-  },
-  "type": "module",
-  "license": "MIT"
+  }
 }
