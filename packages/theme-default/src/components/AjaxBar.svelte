@@ -1,7 +1,9 @@
+<svelte:options runes={true} />
+
 <script>
   import { onDestroy } from 'svelte'
 
-  let barWidth = 0
+  let barWidth = $state(0)
 
   let startedFlag
 
